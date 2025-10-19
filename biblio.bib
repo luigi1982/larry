@@ -1,0 +1,80 @@
+%%% Preliminaries
+
+%Transformers
+@misc{turnerIntroductionTransformers2024,
+  title = {An {{Introduction}} to {{Transformers}}},
+  author = {Turner, Richard E.},
+  year = 2024,
+  month = feb,
+  number = {arXiv:2304.10557},
+  eprint = {2304.10557},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2304.10557},
+  urldate = {2025-09-02},
+  abstract = {The transformer is a neural network component that can be used to learn useful representations of sequences or sets of data-points. The transformer has driven recent advances in natural language processing, computer vision, and spatio-temporal modelling. There are many introductions to transformers, but most do not contain precise mathematical descriptions of the architecture and the intuitions behind the design choices are often also missing. Moreover, as research takes a winding path, the explanations for the components of the transformer can be idiosyncratic. In this note we aim for a mathematically precise, intuitive, and clean description of the transformer architecture. We will not discuss training as this is rather standard. We assume that the reader is familiar with fundamental topics in machine learning including multi-layer perceptrons, linear transformations, softmax functions and basic probability.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {C\:\\Users\\phase\\Zotero\\storage\\K5BDAABU\\Turner - 2024 - An Introduction to Transformers.pdf;C\:\\Users\\phase\\Zotero\\storage\\KS9ECND5\\2304.html}
+}
+
+@misc{liuSwinTransformerHierarchical2021,
+  title = {Swin {{Transformer}}: {{Hierarchical Vision Transformer}} Using {{Shifted Windows}}},
+  shorttitle = {Swin {{Transformer}}},
+  author = {Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining},
+  year = 2021,
+  month = aug,
+  number = {arXiv:2103.14030},
+  eprint = {2103.14030},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2103.14030},
+  urldate = {2025-08-17},
+  abstract = {This paper presents a new vision Transformer, called Swin Transformer, that capably serves as a general-purpose backbone for computer vision. Challenges in adapting Transformer from language to vision arise from differences between the two domains, such as large variations in the scale of visual entities and the high resolution of pixels in images compared to words in text. To address these differences, we propose a hierarchical Transformer whose representation is computed with {\textbackslash}textbf\{S\}hifted {\textbackslash}textbf\{win\}dows. The shifted windowing scheme brings greater efficiency by limiting self-attention computation to non-overlapping local windows while also allowing for cross-window connection. This hierarchical architecture has the flexibility to model at various scales and has linear computational complexity with respect to image size. These qualities of Swin Transformer make it compatible with a broad range of vision tasks, including image classification (87.3 top-1 accuracy on ImageNet-1K) and dense prediction tasks such as object detection (58.7 box AP and 51.1 mask AP on COCO test-dev) and semantic segmentation (53.5 mIoU on ADE20K val). Its performance surpasses the previous state-of-the-art by a large margin of +2.7 box AP and +2.6 mask AP on COCO, and +3.2 mIoU on ADE20K, demonstrating the potential of Transformer-based models as vision backbones. The hierarchical design and the shifted window approach also prove beneficial for all-MLP architectures. The code and models are publicly available at{\textasciitilde}{\textbackslash}url\{https://github.com/microsoft/Swin-Transformer\}.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {C\:\\Users\\phase\\Zotero\\storage\\8IH4NS8B\\Liu et al. - 2021 - Swin Transformer Hierarchical Vision Transformer using Shifted Windows.pdf;C\:\\Users\\phase\\Zotero\\storage\\5QV8MG9E\\2103.html}
+}
+
+
+
+%%% SISR Methods
+
+%DRCAN
+@misc{zhangImageSuperResolutionUsing2018,
+  title = {Image {{Super-Resolution Using Very Deep Residual Channel Attention Networks}}},
+  author = {Zhang, Yulun and Li, Kunpeng and Li, Kai and Wang, Lichen and Zhong, Bineng and Fu, Yun},
+  year = 2018,
+  month = jul,
+  number = {arXiv:1807.02758},
+  eprint = {1807.02758},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.1807.02758},
+  urldate = {2025-10-05},
+  abstract = {Convolutional neural network (CNN) depth is of crucial importance for image super-resolution (SR). However, we observe that deeper networks for image SR are more difficult to train. The low-resolution inputs and features contain abundant low-frequency information, which is treated equally across channels, hence hindering the representational ability of CNNs. To solve these problems, we propose the very deep residual channel attention networks (RCAN). Specifically, we propose a residual in residual (RIR) structure to form very deep network, which consists of several residual groups with long skip connections. Each residual group contains some residual blocks with short skip connections. Meanwhile, RIR allows abundant low-frequency information to be bypassed through multiple skip connections, making the main network focus on learning high-frequency information. Furthermore, we propose a channel attention mechanism to adaptively rescale channel-wise features by considering interdependencies among channels. Extensive experiments show that our RCAN achieves better accuracy and visual improvements against state-of-the-art methods.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {C\:\\Users\\phase\\Zotero\\storage\\EYHFTMH4\\Zhang et al. - 2018 - Image Super-Resolution Using Very Deep Residual Channel Attention Networks.pdf;C\:\\Users\\phase\\Zotero\\storage\\LMJHKCJR\\1807.html}
+}
+
+%SWinIR
+@misc{liangSwinIRImageRestoration2021a,
+  title = {{{SwinIR}}: {{Image Restoration Using Swin Transformer}}},
+  shorttitle = {{{SwinIR}}},
+  author = {Liang, Jingyun and Cao, Jiezhang and Sun, Guolei and Zhang, Kai and Gool, Luc Van and Timofte, Radu},
+  year = 2021,
+  month = aug,
+  number = {arXiv:2108.10257},
+  eprint = {2108.10257},
+  primaryclass = {eess},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2108.10257},
+  urldate = {2025-10-06},
+  abstract = {Image restoration is a long-standing low-level vision problem that aims to restore high-quality images from low-quality images (e.g., downscaled, noisy and compressed images). While state-of-the-art image restoration methods are based on convolutional neural networks, few attempts have been made with Transformers which show impressive performance on high-level vision tasks. In this paper, we propose a strong baseline model SwinIR for image restoration based on the Swin Transformer. SwinIR consists of three parts: shallow feature extraction, deep feature extraction and high-quality image reconstruction. In particular, the deep feature extraction module is composed of several residual Swin Transformer blocks (RSTB), each of which has several Swin Transformer layers together with a residual connection. We conduct experiments on three representative tasks: image super-resolution (including classical, lightweight and real-world image super-resolution), image denoising (including grayscale and color image denoising) and JPEG compression artifact reduction. Experimental results demonstrate that SwinIR outperforms state-of-the-art methods on different tasks by \${\textbackslash}textbf\{up to 0.14\${\textbackslash}sim\$0.45dB\}\$, while the total number of parameters can be reduced by \${\textbackslash}textbf\{up to 67\%\}\$.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Electrical Engineering and Systems Science - Image and Video Processing},
+  file = {C\:\\Users\\phase\\Zotero\\storage\\4XZZLG5L\\Liang et al. - 2021 - SwinIR Image Restoration Using Swin Transformer.pdf;C\:\\Users\\phase\\Zotero\\storage\\XYMV5TZM\\2108.html}
+}
+
+

@@ -1,0 +1,37 @@
+\begin{definition}[Convolution over multiple feature maps]
+
+    Let $X \in \mathbb R^{C \times n_1 \times ... \times n_d}$ and $k \in \mathbb R^{C \times d_1 \times ... \times d_d}$.
+    The convolution of $X$ with the kernel $k$, denoted by $k * X$ is given by
+    
+        $$(k * X)(p_{0}) = \sum_{i=1}^c \sum_{p \in R} k(c, p) X(c, p_{0} + p) ~,$$
+
+    where $R = \prod_{i=1}^d [0, d_i] \cap \mathbb N$, for all $p_0 \in \prod_{i=1}^{d} \mathbb{N} \cap [1, n_i - d_i]$.
+
+\end{definition}
+
+\begin{definition}[Convolutional Layer]
+    Let $X \in \mathbb R^{C \times n_1 \times ... \times n_d}$, $k_1, ..., k_{C'} \in \mathbb R^{C \times d_1 \times ... \times d_d}$ and $b \in \mathbb R^{C'}$.
+    We call the mapping 
+
+        $$ C : \mathbb R^{C \times n_1 \times ... \times n_d} \to \mathbb R^{C' \times n_1 \times ... \times n_d} ~, ~~
+        C(X) = [k_1 * X, ..., k_{C'} * X] + b ~, $$
+
+    a convolutional layer.
+\end{definition}
+
+In order to refer to the architecture,
+thats is a convolutional layer with input channel dimension $C \in \mathbb N$ and output channel dimension $C' \in \mathbb N$,
+kernels $k_1, ..., k_{C'} \in \mathbb R^{C \times d_1 \times ... \times d_d}$ and $b \in \mathbb R^{C'}$,
+which are not fixed but subject to optimization, 
+we write 
+
+    $$C(n, m, \text{kernel-size}=(d_1, ..., d_d), \text{padding}=p, \text{padding-mode}=m) ~.$$
+
+\begin{definition}[Residual Connection]
+    Let $X$ be some set, $F = \{f : X \to X | f \text{is a function} \}$ be the set of functions on $X$ mapping back on $X$.
+    The operation
+    
+        $$ R : F \to F ~, ~~ R(f)(x) = f(x) + x ~, $$
+
+    for all $x \in X$, is called the residual mapping.
+\end{definition}

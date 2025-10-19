@@ -1,0 +1,25 @@
+Independent of the domain of application,
+a general architectural choice that can be observed in all super resolution models,
+is that the architecture is made up of three components.
+A shallow feature extraction module $H_{S}$, a deep feature extraction module $H_{D}$ and an image reconstruction module $H_{IR}$.
+Typically the model architecture is conceptualized as follows
+
+    \begin{equation} \label{eq:general_sr_model}
+        H = H_{IR} \circ R(H_{D}) \circ H_{S} ~.
+    \end{equation}
+
+The shallow feature extraction module $H_{S}$ scales the channel dimension of the input to a higher dimension,
+which is used throughout the majority of the network.
+Additionally it extracts low frequency features.
+The module is usually composed of only one or few convolutional layers. \newline
+The deep feature extraction module $H_{D}$ forms the main part of the model.
+It is supposed to recover high frequency information.
+Here is where different architectures proposed in the literature vary the most,
+convolutional layers, transformer models and various combinations thereof have been tried out. \newline
+Note the residual connection in equation (\ref{eq:general_sr_model}),
+the rational behind this being that this way the low frequency features extracted by $H_S$ can bypass the deep feature extraction module $H_D$. 
+The image reconstruction module $H_{IR}$ maps the input back to the original channel dimension
+and scales the spatial dimension to the desired size.
+It has been experimentally confirmed that better results are achieved when scaling is done at the end,
+rather than processing the already spatially upsampled input.
+To this end usually transposed convolutional layers or pixel sshuflling layers are employed.

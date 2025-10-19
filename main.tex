@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{subfiles} %to load tex files into main.tex
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+
+%%% Definitions
+\newtheorem{definition}{Definition}
+
+\title{Micro-lens image stack upsampling for hyperspectral light fields}
+\author{Paul Hasenbusch}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Models}
+\subfile{models/main}
+
+\newpage
+
+\section{Training}
+\subfile{training/main}
+
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{biblio}
+
+\end{document}
