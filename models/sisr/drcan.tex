@@ -23,7 +23,7 @@ that is $64$ ingoing feature maps processed by $64$ quadratic kernels of size $3
 so that feature map sizes are conserved throughout the model.
 The inial features $F_0$ are then further processed by a network with a residual in residual architecture
 
-    $$ F_{1} = H_{RIR}(F_0) ~. $$
+    $$ F_{1} = H_{D}(F_0) ~. $$
 
 For low-frequency features to bypass the deep feature extraction, 
 a residual connection is used before the upsampling is performed
@@ -34,7 +34,7 @@ The final features $F_2$ are then upsampled using transposed convolutional layer
 The $H_{RIR}$ network is composed of $10$ Residual Groups followed by a final convolutional layer, 
 that is 
 
-    $$ H_{RIR} = C \circ H_{RG} \circ ... \circ H_{RG} ~.$$
+    $$ H_{D} = C \circ H_{RG} \circ ... \circ H_{RG} ~.$$
 
 The Residual Groups (RG) are again composed of $20$ Residual Channel Attention Blocks followed as well by a convolutional layer,
 the structure is encapsuled in a residual connection
@@ -53,7 +53,9 @@ with a ReLU activation function in between,
 followed by a channel attention module,
 the output is then added back to the input again via a residual connection
 
-    $$H_{RCAB} = R \big( H_{CA} \circ C \circ \text{ReLU} \circ C \big) ~. $$
+    \begin{equation} \label{eq:rcab}
+        H_{RCAB} = R \big( H_{CA} \circ C \circ \text{ReLU} \circ C \big) ~.
+    \end{equation}
 
 \begin{figure}[h!]
     \includegraphics[width=0.9\textwidth]{models/sisr/imgs/channel_attention.png}
@@ -75,5 +77,7 @@ the sigmoid activation function is applied at last,
 in order to squash the attention scores into the interval $[0, 1]$.
 Channel attention the weights the inputs according to the attention scores
 
-    $$H_{CA}(X) = \Phi \circ H_{GP} (X) \cdot X ~.$$
+    \begin{equation} \label{eq:ca}
+        H_{CA}(X) = \Phi \circ H_{GP} (X) \cdot X ~.
+    \end{equation}
 

@@ -28,8 +28,15 @@ followed by a last convolutional layer
 
     $$H_D = C(180, 180) \circ H_{RSTB} \circ ... \circ H_{RSTB} ~.$$
 
-Each RSTB is consists of $6$ Transformer layers where every second makes use of the shifted window mechanism, 
+Each RSTB is consists of $6$ Transformer layers where every second makes use of the shifted window mechanism,
+or using the notation introduced in section \ref{sec:transformer} $3$ Shifted Window Transformer Blocks SWinT,
 these are suceeded by a final convolutional layer
 
-    $$H_{RSTB} = C(180, 180) \circ H_{STL} \circ H_{TL} \circ ... \circ \circ H_{STL} \circ H_{TL} ~.$$
+    $$H_{RSTB} = C(180, 180) \circ \text{SWinT}(180, 6, \Phi, \Phi) \circ ... \circ \text{SWinT}(180, 6, \Phi, \Phi) ~.$$
+
+The network $\Phi : \mathbb R^{180} \to \mathbb R^{180}$ is given by
+
+    \begin{equation} \label{eq:phi}
+        \Phi = F(360, 180) \circ \text{GELU} \circ F(180, 360) ~. 
+    \end{equation}
 
