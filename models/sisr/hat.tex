@@ -28,7 +28,9 @@ A HAB is a modification of a Shifted Window Transformer Block,
 where in parallel to the Shifted Window Multi Headed Attention,
 Channel Attention Block (CAB) $H_{CAB}$ is employed
 
-    $$ H_{CAB} = H_{CA} \circ C \circ \text{ReLU} \circ C ~, $$
+    \begin{equation} \label{eq:cab}
+        H_{CAB} = H_{CA} \circ C \circ \text{ReLU} \circ C ~,
+    \end{equation}
 
 with $H_{CA}$ defined as in equation \ref{eq:ca}.
 Let $s: \mathbb R^{d} \times \mathbb R^{d} \to \mathbb R^d, s(x,y) = x + y$ be the element-wise summation

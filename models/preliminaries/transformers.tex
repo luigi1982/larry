@@ -271,7 +271,7 @@ for a patch $p = 1, ..., P$,
 the attention scores are computed in the following way
 
     \begin{equation} \label{eq:oca1}
-        A_{ij} = \frac{\text{exp}({x_{i}^{(p)}}^T K^T Q x_{j}^{(p)})}{\sum_{k = 1}^n \text{exp}({x_{k}^{(p)}}^T K^T Q x_{j}^{(p)})} ~,
+        A_{ij} = \frac{\text{exp}({x_{i}^{(p)}}^T K^T Q x_{j}^{(p)})}{\sum_{k = 1}^{M_o} \text{exp}({x_{k}^{(p)}}^T K^T Q x_{j}^{(p)})} ~,
     \end{equation}
 
 for $i = 0, ..., M_o$

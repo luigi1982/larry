@@ -117,5 +117,80 @@
   file = {C\:\\Users\\phase\\Zotero\\storage\\4XZZLG5L\\Liang et al. - 2021 - SwinIR Image Restoration Using Swin Transformer.pdf;C\:\\Users\\phase\\Zotero\\storage\\XYMV5TZM\\2108.html}
 }
 
+%Hat already cited in transformer
+
+%%% HSISR
+
+%F3DUN
+@article{liuRethinking3DCNNHyperspectral2023,
+  title = {Rethinking {{3D-CNN}} in {{Hyperspectral Image Super-Resolution}}},
+  author = {Liu, Ziqian and Wang, Wenbing and Ma, Qing and Liu, Xianming and Jiang, Junjun},
+  year = 2023,
+  month = jan,
+  journal = {Remote. Sens.},
+  urldate = {2025-09-15},
+  abstract = {Recently, CNN-based methods for hyperspectral image super-resolution (HSISR) have achieved outstanding performance. Due to the multi-band property of hyperspectral images, 3D convolutions are natural candidates for extracting spatial--spectral correlations. However, pure 3D CNN models are rare to see, since they are generally considered to be too complex, require large amounts of data to train, and run the risk of overfitting on relatively small-scale hyperspectral datasets. In this paper, we question this common notion and propose Full 3D U-Net (F3DUN), a full 3D CNN model combined with the U-Net architecture. By introducing skip connections, the model becomes deeper and utilizes multi-scale features. Extensive experiments show that F3DUN can achieve state-of-the-art performance on HSISR tasks, indicating the effectiveness of the full 3D CNN on HSISR tasks, thanks to the carefully designed architecture. To further explore the properties of the full 3D CNN model, we develop a 3D/2D mixed model, a popular kind of model prior, called Mixed U-Net (MUN) which shares a similar architecture with F3DUN. Through analysis on F3DUN and MUN, we find that 3D convolutions give the model a larger capacity; that is, the full 3D CNN model can obtain better results than the 3D/2D mixed model with the same number of parameters when it is sufficiently trained. Moreover, experimental results show that the full 3D CNN model could achieve competitive results with the 3D/2D mixed model on a small-scale dataset, suggesting that 3D CNN is less sensitive to data scaling than what people used to believe. Extensive experiments on two benchmark datasets, CAVE and Harvard, demonstrate that our proposed F3DUN exceeds state-of-the-art HSISR methods both quantitatively and qualitatively.},
+  langid = {english},
+  file = {C:\Users\phase\Zotero\storage\9QHLZ27D\Liu et al. - 2023 - Rethinking 3D-CNN in Hyperspectral Image Super-Resolution.pdf}
+}
+
+%SSAformer
+@article{wangSSAformerSpatialSpectral2024,
+  title = {{{SSAformer}}: {{Spatial}}--{{Spectral Aggregation Transformer}} for {{Hyperspectral Image Super-Resolution}}},
+  shorttitle = {{{SSAformer}}},
+  author = {Wang, Haoqian and Zhang, Qi and Peng, Tao and Xu, Zhongjie and Cheng, Xiangai and Xing, Zhongyang and Li, Teng},
+  year = 2024,
+  month = may,
+  journal = {Remote Sensing},
+  volume = {16},
+  pages = {1766},
+  doi = {10.3390/rs16101766},
+  abstract = {The hyperspectral image (HSI) distinguishes itself in material identification through its exceptional spectral resolution. However, its spatial resolution is constrained by hardware limitations, prompting the evolution of HSI super-resolution (SR) techniques. Single HSI SR endeavors to reconstruct high-spatial-resolution HSI from low-spatial-resolution inputs, and recent progress in deep learning-based algorithms has significantly advanced the quality of reconstructed images. However, convolutional methods struggle to extract comprehensive spatial and spectral features. Transformer-based models have yet to harness long-range dependencies across both dimensions fully, thus inadequately integrating spatial and spectral data. To solve the above problem, in this paper, we propose a new HSI SR method, SSAformer, which merges the strengths of CNNs and Transformers. It introduces specially designed attention mechanisms for HSI, including spatial and spectral attention modules, and overcomes the previous challenges in extracting and amalgamating spatial and spectral information. Evaluations on benchmark datasets show that SSAformer surpasses contemporary methods in enhancing spatial details and preserving spectral accuracy, underscoring its potential to expand HSI's utility in various domains, such as environmental monitoring and remote sensing.},
+  file = {C:\Users\phase\Zotero\storage\QFA7G428\Wang et al. - 2024 - SSAformer Spatial–Spectral Aggregation Transformer for Hyperspectral Image Super-Resolution.pdf}
+}
+
+%%% SSR
+
+%MST
+@misc{caiMSTMultistageSpectralwise2022a,
+  title = {{{MST}}++: {{Multi-stage Spectral-wise Transformer}} for {{Efficient Spectral Reconstruction}}},
+  shorttitle = {{{MST}}++},
+  author = {Cai, Yuanhao and Lin, Jing and Lin, Zudi and Wang, Haoqian and Zhang, Yulun and Pfister, Hanspeter and Timofte, Radu and Gool, Luc Van},
+  year = 2022,
+  month = apr,
+  number = {arXiv:2204.07908},
+  eprint = {2204.07908},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2204.07908},
+  urldate = {2025-10-07},
+  abstract = {Existing leading methods for spectral reconstruction (SR) focus on designing deeper or wider convolutional neural networks (CNNs) to learn the end-to-end mapping from the RGB image to its hyperspectral image (HSI). These CNN-based methods achieve impressive restoration performance while showing limitations in capturing the long-range dependencies and self-similarity prior. To cope with this problem, we propose a novel Transformer-based method, Multi-stage Spectral-wise Transformer (MST++), for efficient spectral reconstruction. In particular, we employ Spectral-wise Multi-head Self-attention (S-MSA) that is based on the HSI spatially sparse while spectrally self-similar nature to compose the basic unit, Spectral-wise Attention Block (SAB). Then SABs build up Single-stage Spectral-wise Transformer (SST) that exploits a U-shaped structure to extract multi-resolution contextual information. Finally, our MST++, cascaded by several SSTs, progressively improves the reconstruction quality from coarse to fine. Comprehensive experiments show that our MST++ significantly outperforms other state-of-the-art methods. In the NTIRE 2022 Spectral Reconstruction Challenge, our approach won the First place. Code and pre-trained models are publicly available at https://github.com/caiyuanhao1998/MST-plus-plus.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {C\:\\Users\\phase\\Zotero\\storage\\VMC8K2M7\\Cai et al. - 2022 - MST++ Multi-stage Spectral-wise Transformer for Efficient Spectral Reconstruction.pdf;C\:\\Users\\phase\\Zotero\\storage\\EXHZM9YL\\2204.html}
+}
+
+%%% LFSR
+
+% EPIT
+@inproceedings{liangLearningNonLocalSpatialAngular2023a,
+  title = {Learning {{Non-Local Spatial-Angular Correlation}} for {{Light Field Image Super-Resolution}}},
+  booktitle = {2023 {{IEEE}}/{{CVF International Conference}} on {{Computer Vision}} ({{ICCV}})},
+  author = {Liang, Zhengyu and Wang, Yingqian and Wang, Longguang and Yang, Jungang and Zhou, Shilin and Guo, Yulan},
+  year = 2023,
+  month = oct,
+  pages = {12342--12352},
+  publisher = {IEEE},
+  address = {Paris, France},
+  doi = {10.1109/ICCV51070.2023.01137},
+  urldate = {2025-08-25},
+  abstract = {Exploiting spatial-angular correlation is crucial to light field (LF) image super-resolution (SR), but is highly challenging due to its non-local property caused by the disparities among LF images. Although many deep neural networks (DNNs) have been developed for LF image SR and achieved continuously improved performance, existing methods cannot well leverage the long-range spatialangular correlation and thus suffer a significant performance drop when handling scenes with large disparity variations. In this paper, we propose a simple yet effective method to learn the non-local spatial-angular correlation for LF image SR. In our method, we adopt the epipolar plane image (EPI) representation to project the 4D spatialangular correlation onto multiple 2D EPI planes, and then develop a Transformer network with repetitive self-attention operations to learn the spatial-angular correlation by modeling the dependencies between each pair of EPI pixels. Our method can fully incorporate the information from all angular views while achieving a global receptive field along the epipolar line. We conduct extensive experiments with insightful visualizations to validate the effectiveness of our method. Comparative results on five public datasets show that our method not only achieves state-of-the-art SR performance but also performs robust to disparity variations. Code is publicly available at https://github.com/ ZhengyuLiang24/EPIT.},
+  copyright = {https://doi.org/10.15223/policy-029},
+  isbn = {979-8-3503-0718-4},
+  langid = {english},
+  file = {C:\Users\phase\Zotero\storage\N9FKYHYY\Liang et al. - 2023 - Learning Non-Local Spatial-Angular Correlation for Light Field Image Super-Resolution.pdf}
+}
+
+
 
 
