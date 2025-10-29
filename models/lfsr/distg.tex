@@ -86,6 +86,10 @@ the outputs are concatenated and fused by convolution with kernel size $1$ follo
 \end{equation}
 
 where $\sigma = (1, 3, 2)$.
-The deep feature extraction model is composed of $4$ cascaded disentanglement blocks followed by a final spatial feature extraction
+Four cascaded disentanglement blocks followed by a spatial convolution encapsuled inside of a residual connection make up one disentanglement block
 
-    $$ H_d = C_{sfe} \circ H_{Distg} \circ ... \circ H_{Distg} ~. $$
+    $$ H_{Distg-Group} = R(C_{sfe} \circ H_{Distg} \circ ... \circ H_{Distg}) ~.$$
+
+Finally, the deep feature extraction model is composed of $4$ disentanglement groups followed by a final spatial feature extraction
+
+    $$ H_d = C_{sfe} \circ H_{Distg-Group} \circ ... \circ H_{Distg-Group} ~. $$
